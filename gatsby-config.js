@@ -5,7 +5,7 @@ module.exports = {
     author: `@obinnaspeaks`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    // `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,7 +13,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    /* `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -26,7 +26,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    },
+    },*/
     `gatsby-remark-katex`,
     {
       resolve: `gatsby-plugin-mdx`,
@@ -38,6 +38,9 @@ module.exports = {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`
             }
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
           }
         ],
         defaultLayouts: {
